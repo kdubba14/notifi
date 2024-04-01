@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package notification;
+
+message Notification {
+  string Message = 1;
+}
+
+service NotificationService {
+  rpc CreateNotification(Notification) returns (Notification);
+}
